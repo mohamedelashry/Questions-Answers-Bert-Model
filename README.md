@@ -18,8 +18,26 @@ Then go this url
 http://localhost:5000
 
 
-### Demo
-[https://question-and-answering.herokuapp.com](https://question-and-answering.herokuapp.com)
+### Docker Deployment
+
+`docker-compose up`
+
+don`t froget to edit the default.conf with : 
+`server {
+    listen 80;
+    root /home/ubuntu/react-flask-app/build;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /api {
+        include proxy_params;
+        proxy_pass http://localhost:5000;
+    }
+}
+`
 
 ### sample paragraph 
 The Vatican Apostolic Library (), more commonly called the Vatican Library or simply the Vat, is the library of the Holy See, located in Vatican City. Formally established in 1475, although it is much older, it is one of the oldest libraries in the world and contains one of the most significant collections of historical texts. It has 75,000 codices from throughout history, as well as 1.1 million printed books, which include some 8,500 incunabula. \n\nThe Vatican Library is a research library for history, law, philosophy, science and theology. The Vatican Library is open to anyone who can document their qualifications and research needs. Photocopies for private study of pages from books published between 1801 and 1990 can be requested in person or by mail. \n\nIn March 2014, the Vatican Library began an initial four-year project of digitising its collection of manuscripts, to be made available online. \n\nThe Vatican Secret Archives were separated from the library at the beginning of the 17th century; they contain another 150,000 items. \n\nScholars have traditionally divided the history of the library into five periods, Pre-Lateran, Lateran, Avignon, Pre-Vatican and Vatican. \n\nThe Pre-Lateran period, comprising the initial days of the library, dated from the earliest days of the Church. Only a handful of volumes survive from this period, though some are very significant.

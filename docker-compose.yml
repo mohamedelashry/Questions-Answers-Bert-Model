@@ -1,0 +1,13 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Server\Dockerfile.api
+    image: Server
+  client:
+    build:
+      context: .
+      dockerfile: Interface\Dockerfile.client
+    image: Interface
+    ports:
+      - "3000:80"
