@@ -22,7 +22,8 @@ http://localhost:5000
 
 `docker-compose up`
 
-don`t froget to edit the default.conf with : 
+do not forget to edit the default.conf with : 
+
 `server {
     listen 80;
     root /home/ubuntu/react-flask-app/build;
