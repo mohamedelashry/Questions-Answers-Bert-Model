@@ -1,4 +1,4 @@
-# Deploying BERT on Heroku
+# Deploying BERT on docker
 I shall use BERT that is trained by huggingface on a dataset for questions and answers i.e. Stanford Question Answering Dataset (SQuAD) and deploy the  model on Heroku for real time inference , also add scoring metric suitable for your model. on a
 sample or a small dataset .
 
