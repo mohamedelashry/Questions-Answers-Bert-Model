@@ -17,7 +17,7 @@ function App() {
     try {
       const data = new FormData();
       data.append('sample', sample);
-      const response = await axios.post('https://questions-answers-server.herokuapp.com/score', data, {
+      const response = await axios.post('https://questions-answers-bert-model-fy69.vercel.app//score', data, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       setScoreResult(response.data)
@@ -42,7 +42,7 @@ function App() {
       const data = new FormData();
       data.append('paragraph', paragraph);
       data.append('question', question);
-      const response = await axios.post('https://questions-answers-server.herokuapp.com/predict', data, {
+      const response = await axios.post('https://questions-answers-bert-model-fy69.vercel.app//predict', data, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       setPredictResult(response.data)
